@@ -1,3 +1,115 @@
-h1 {
-  color: red;
+/* Reset some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the whole page */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative; /* To allow absolute positioning of the illustration */
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.header .logo {
+  color: white;
+}
+
+.header .menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Main content section */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns content to the left */
+  text-align: left; /* Makes sure text is left-aligned */
+  flex-grow: 1;
+  padding-left: 15px; /* Add padding to the left for breathing space */
+  background : url(Illustration.png);
+  background-position: bottom right;
+  background-repeat: no-repeat ;
+}
+
+.main-content h1 {
+  color: #ff7f27;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.main-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.main-content h2 span {
+  font-weight: bold;
+}
+
+.main-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 0 15px 0 0; /* Remove right padding, keep only left */
+  line-height: 1.5;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* Align icons to the left */
+  gap: 15px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.social-icons i:hover {
+  color: #ff7f27;
+}
+
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  .main-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .main-content h2 {
+      font-size: 1.3rem;
+  }
+
+  .main-content p {
+      font-size: 0.9rem;
+  }
+
+  .social-icons i {
+      font-size: 20px;
+  }
+
+  .illustration-container {
+      width: 100px; /* Smaller illustration for mobile */
+  }
 }
